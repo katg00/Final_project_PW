@@ -13,13 +13,13 @@ export class Cart {
   }
 
   async checkCart(productName, productId) {
-    await expect(this.cartItem.toContainText(`${productName} (p${productId})`))
+    await expect(this.cartItem).toContainText(`${productName} (p${productId})`);
   }
 
-  // async buyItem () {
-  //   await page.getByTestId('cart-buy').click()
-  //   await expect(page.locator('body')).toContainText('sukces');
-  // }
+  async buyItem () {
+    await this.page.getByTestId('cart-buy').click()
+    await expect(this.page.locator('body')).toContainText('sukces');
+  }
 };
 
 

@@ -43,6 +43,6 @@ test('Main Page - buy items', async({page}) => {
 
   await cart.checkCart(testedItem.name, testedItem.id);
   
-  // await cart.buyItem();
+  await cart.buyItem();
 
 })
