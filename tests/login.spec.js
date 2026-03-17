@@ -13,7 +13,7 @@ test('Main Page - Log in admin', async ({page}) => {
 
   const testedUser = {
     username: process.env.ADMIN_LOGIN,
-    password: process.env.ADMIN_PASWORD
+    password: process.env.ADMIN_PASSWORD
   }
 
   await loginpage.LogIn(testedUser.username,testedUser.password);
